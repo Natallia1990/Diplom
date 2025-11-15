@@ -40,3 +40,5 @@ Pytest - фреймворк тестирования
 Allure - продвинутая отчетность
 
 Requests - HTTP запросы
+Тест- план: https://natalya-kleshchenko.yonote.ru/share/c5401008-bf43-4510-b07e-e73654f2ee19
+Отчет: https://natalya-kleshchenko.yonote.ru/share/9cacf12f-a0ae-4bbd-ac3f-b74369adf59b

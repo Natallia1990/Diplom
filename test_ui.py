@@ -138,4 +138,3 @@ class TestKinopoiskUI:
             if not has_match:
                 titles = search_page.get_search_results_titles()
                 print(f"Заголовки для '{movie}': {titles[:5]}")
-
