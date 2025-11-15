@@ -1,0 +1,44 @@
+# Kinopoisk Autotests
+
+Автоматизированные тесты API и UI для функциональности поиска Кинопоиска.
+
+## 📦 Установка
+```bash
+# Установите зависимости
+pip install -r requirements.txt
+
+🚀 Быстрый запуск
+
+API тесты
+
+pytest test_api.py -v
+
+UI тесты
+
+pytest test_ui.py -v
+
+Все тесты
+
+pytest -v
+
+📊 Генерация отчетов
+
+# Allure отчет
+pytest --alluredir=allure-results
+allure serve allure-results
+
+# HTML отчет
+pytest --html=report.html
+
+🛠 Технологии
+Python 3.8+ - основной язык
+
+Selenium - автоматизация браузера
+
+Pytest - фреймворк тестирования
+
+Allure - продвинутая отчетность
+
+Requests - HTTP запросы
+Тест- план: https://natalya-kleshchenko.yonote.ru/share/c5401008-bf43-4510-b07e-e73654f2ee19
+Отчет: https://natalya-kleshchenko.yonote.ru/share/9cacf12f-a0ae-4bbd-ac3f-b74369adf59b
