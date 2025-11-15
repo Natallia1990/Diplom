@@ -1,8 +1,8 @@
 import requests
 import allure
-from typing import Dict, List, Optional, Any
-from config.settings import Settings, APISettings
-from config.test_data import TestData
+from typing import Dict, Optional, Any
+from config import Settings, APISettings
+from test_data import TestData
 
 
 class KinopoiskAPIClient:
@@ -18,7 +18,8 @@ class KinopoiskAPIClient:
         })
 
     @allure.step("API: Поиск фильмов по запросу '{query}'")
-    def search_movies(self, query: str, page: int = 1, limit: int = 10) -> Dict[str, Any]:
+    def search_movies(self, query: str,
+                      page: int = 1, limit: int = 10) -> Dict[str, Any]:
         """
         Выполняет поиск фильмов по названию
 
@@ -61,7 +62,8 @@ class KinopoiskAPIClient:
         return response.json()
 
     @allure.step("API: Проверка структуры ответа")
-    def validate_movie_response_structure(self, movie_data: Dict[str, Any]) -> bool:
+    def validate_movie_response_structure(self,
+                                          movie_data: Dict[str, Any]) -> bool:
         """
         Проверяет структуру ответа с информацией о фильме
 
@@ -90,7 +92,9 @@ class KinopoiskAPIClient:
                 search_response.get("total") > 0)
 
     @allure.step("API: Получение первого результата поиска")
-    def get_first_search_result(self, search_response: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    def get_first_search_result(self,
+                                search_response:
+                                Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """
         Получает первый результат из ответа поиска
 
